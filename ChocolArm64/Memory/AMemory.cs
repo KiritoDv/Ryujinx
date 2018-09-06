@@ -232,7 +232,7 @@ namespace ChocolArm64.Memory
             }
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Vector128<float> ReadVector32(long Position)
         {
             if (Sse.IsSupported)
@@ -245,7 +245,7 @@ namespace ChocolArm64.Memory
             }
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Vector128<float> ReadVector64(long Position)
         {
             if (Sse2.IsSupported)
@@ -357,7 +357,7 @@ namespace ChocolArm64.Memory
             }
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void WriteVector32(long Position, Vector128<float> Value)
         {
             if (Sse.IsSupported)
@@ -370,7 +370,7 @@ namespace ChocolArm64.Memory
             }
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void WriteVector64(long Position, Vector128<float> Value)
         {
             if (Sse2.IsSupported)
